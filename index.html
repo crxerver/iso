@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>motionapp</title>
+<meta name="apple-mobile-web-app-title" content="motionapp">
+<meta name="generator" content="In5 v3.8.16">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1.0,minimum-scale=.2,maximum-scale=1.0,user-scalable=no">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+<script type="text/javascript" src="assets/js/vmouse.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="assets/js/in5.config.js"></script>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="assets/css/pages.css" media="all">
+<style media="all and (-ms-high-contrast:none)">*::-ms-backdrop,.svg-img{width:100%;}</style>
+<style>
+  #fullscreenButton {
+    font-family: Poppins;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
+    z-index: 1000;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+<div id="fullscreenButton">App mode</div>
+<div id="container-wrap">
+
+<div id="container">
+<ul class="pages paper-vertical one-page-scroll" id="slider">
+  <li class="page" data-name="1">
+    <div class="page-scale-wrap mq-none mq-default" role="region" data-layout-name="undefined" data-ani-load="go({target:this},[{del:5,n:1,id:411,act:'play'}], 'pageload');" style="width:375px;height:812px;">
+      <div id="item406" class="pageItem embed-container" alt="HTML"><iframe width="375" height="812" src="https://xd.adobe.com/embed/6f4694f3-2aec-49fa-9985-f361e2783dd0-3a15/" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+      <div data-ani="fadeout-411 1s linear 1" data-id="411" id="item411" data-hideend="1" alt="load01" style="width: 375px !important;height:812px !important;" class="pageItem group ">
+        <div id="item413" alt="Rectangle" class="pageItem ">&nbsp;</div>
+        <img src="assets/images/welcome.gif" alt="Rectangle" style="width:298px !important;height:224px !important;left:36px !important;top:294px !important;" id="item415" class="pageItem "/>
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+</div>
+<script>
+  document.getElementById('fullscreenButton').addEventListener('click', () => {
+    hideButton();
+    launchFullscreen();
+  });
+
+  function launchFullscreen() {
+    const docEl = document.documentElement;
+    if (docEl.requestFullscreen) {
+      docEl.requestFullscreen();
+    } else if (docEl.webkitRequestFullscreen) { /* Safari */
+      docEl.webkitRequestFullscreen();
+    } else if (docEl.msRequestFullscreen) { /* IE11 */
+      docEl.msRequestFullscreen();
+    }
+  }
+
+  function hideButton() {
+    document.getElementById('fullscreenButton').style.display = 'none';
+  }
+</script>
+</body>
+</html>
